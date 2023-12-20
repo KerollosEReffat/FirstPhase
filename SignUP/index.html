@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="formFunction(); reset(); return false;" method="post" aria-invalid="false">
+            <div class="title">
+                <h1>Registeration</h1>
+                <!-- <h1>Sign UP</h1> -->
+            </div>
+            <!-- <div class="divInputField">
+                <label id="firstNameLabel" for="firstName" aria-required="true">First Name</label>
+                <input id="firstName" type="text" name="firstName" placeholder="First Name">
+            </div>
+            <div class="divInputField">
+                <label id="seconedNameLabel" for="seconedName" aria-required="true">Seconed <span> Name</span></label>
+                <input id="seconedName" type="text" name="seconedName" placeholder="Seconed Name">
+            </div> -->
+            <div class="divInputField">
+                <label id="fullNameLabel" for="fullName" aria-required="true">Full Name</label>
+                <input id="fullName" type="text" name="fullName" placeholder="Full Name">
+            </div>
+            <div class="divInputField">
+                <label id="userNameLabel" for="userName" aria-required="true">User Name</label>
+                <input id="userName" type="text" name="userName" placeholder="User Name">
+            </div>
+            <div class="divInputField">
+                <label id="emailLabel" for="email" aria-required="true">Email</label>
+                <input id="email" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="divInputField">
+                <label id="passwordLabel" for="password" aria-required="true">Password</label>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </div>
+
+            <div class="radioDiv">
+                <label aria-required="true">Gender</label>
+                <div>
+                    <div>
+                        <input id="Male" type="radio" name="general"/>
+                        <label for="Male" aria-required="true">Male</label>
+                    </div>
+                    <div>
+                        <input id="Female" type="radio" name="general"/>
+                        <label for="Female" aria-required="true">Female</label>
+                    </div>
+                    <div>
+                        <input id="PreferNotToSay" type="radio" name="general"/>
+                        <label for="PreferNotToSay" aria-required="true">Prefer not to say</label>
+                    </div>
+                </div>
+            </div>
+            <div class="divInputField">
+                <label id="phoneLabel" for="phone" aria-required="true">Phone</label>
+                <input id="phone" type="text" name="phone" placeholder="Phone">
+            </div>
+            <div class="divInputField">
+                <label id="birthDataLabel" for="birthData" aria-required="true">Birth Date</label>
+                <input id="birthData" type="date" name="birthData" placeholder="Birth Data >>> MM/DD/YYYY">
+            </div>
+            <div class="questionLink">
+                <span>You Have An Account ? <a href="../SignIN/index.html">Log in</a></span>
+            </div>
+            <div class="centerDiv">
+                <input id="Reset" type="reset" value="Reset" name="Reset">
+                <input id="Submit" type="submit" value="Submit" name="Submit">
+            </div>
+        </form>
+    </div>
+    <script src="./js.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  lightblue;
+    /* background-color:  rgb(84, 164, 189); */
+
+    font-size: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+    width: 35%;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+
+    /* box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3); */
+    
+    /* box-shadow: 
+        -15px -15px 15px rgba(255, 255, 255, 0.2),
+        15px 15px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2); */
+
+    box-shadow: 
+        -1px -1px 15px rgba(0, 0, 0, 0.2),
+        15px 15px 15px rgba(255, 255, 255, 0.1),
+        inset -7px -7px 5px rgba(255, 0, 0, 0.2);
+
+    /* box-shadow: 
+        -15px -15px 15px rgba(255, 255, 255, 0.2),
+        15px 15px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1); */
+}
+
+form > div {
+    margin: 20px 0px;
+}
+
+form label {
+    font-weight: 900;
+    width: 45%;
+    padding: 10px 0px;
+}
+
+.title {
+    margin: 10px 0px 40px 0px;
+    position: relative;
+}
+
+.title::before ,
+.title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 105px;
+    background:  linear-gradient(135deg, lightblue, rgb(138, 172, 184));
+}
+.title::before {
+    bottom: -10px;
+}
+.title::after {
+    bottom: -15px;
+}
+
+.divInputField {
+    display: flex;
+}
+
+.divInputField label {
+    position: relative;
+    cursor: pointer;
+}
+
+.divInputField label::after {
+    content: ":";
+    color: black;
+    position: absolute;
+    top: 7px;
+    font-size: 24.5px;
+    font-weight: 900;
+}
+#userNameLabel::after {
+    left: 100px;
+}
+#passwordLabel::after {
+    left: 87px;
+}
+
+
+.divInputField input {
+    width: 90%;
+    font: 17px sans-serif;
+    font-weight: 700;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+.divInputField input:hover {
+    border:1px solid black;
+}
+
+.centerDiv {
+    margin: 20px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.centerDiv span {
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.centerDiv span a {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+.centerDiv input {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px 0px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgba(255, 0, 0, 0.664);
+    cursor: pointer;
+    /* box-shadow: 3px 2px 7px 3px rgba(0, 0, 0, 0.5); */
+}
+
+.centerDiv input:hover {
+    background-color: rgba(243, 86, 86, 0.664);
+    /* box-shadow: 3px 2px 7px 3px rgba(0, 0, 0, 0.5); */
+}
+
+.centerDiv input:active {
+    background-color: rgba(255, 0, 0, 0.664);
+    /* box-shadow: 3px 2px 7px 3px rgba(0, 0, 0, 0.5); */
+}
+
+
+
+
+@media screen and (max-width: 1581.6px) {
+    .container {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1481.6px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1381.6px) {
+    .container {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1281.6px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1181.6px) {
+    .container {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1081.6px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 981.6px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 881.6px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 781.6px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 450.6px) {
+    .divInputField {
+        flex-direction: column;
+        align-items: center;
+    }
+    .divInputField input {
+        width: 100%;
+    }
+    .divInputField label::after {
+        display: none;
+    }
+    #userNameLabel {
+        left: 35px;
+    }
+    #passwordLabel {
+        left: 44px;
+    }
+}
+
+@media screen and (max-width: 396.6px) {
+    #userNameLabel {
+        left: 28px;
+    }
+    #passwordLabel {
+        left: 40px;
+    }
+}
+
+@media screen and (max-width: 348.6px) {
+    .divInputField label {
+        display: none;
+    }
+    .divInputField input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 322.6px) {
+    .centerDiv span {
+        text-align: center;
+    }
+    .centerDiv a {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 258.6px) {
+    .title {
+        text-align: center;
+    }
+    .title::before ,
+    .title::after {
+        width: 100%;
+    }
+} 
+
+@media screen and (max-width: 205.6px) {
+    .container {
+        min-width: 160px;
+    }
+    .divInputField input {
+        font: 12px sans-serif;
+        font-weight: 100;
+        padding: 5px 15px;
+    }
+    .centerDiv input {
+        font-size: 13px;
+    }
+}

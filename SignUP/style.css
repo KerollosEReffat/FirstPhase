@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:  linear-gradient(135deg, #71b7e5, #9b59b6);
+    font-size: 25px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.377);
+    border-radius: 20px;
+    padding: 30px;
+    width: 50%;
+}
+
+form > div {
+    margin: 20px 0px;
+}
+
+.title {
+    margin: 10px 0px 40px 0px;
+    position: relative;
+}
+
+.title::before ,
+.title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 180px;
+    background:  linear-gradient(135deg, #71b7e5, #9b59b6);
+}
+.title::before {
+    bottom: -10px;
+}
+.title::after {
+    bottom: -15px;
+}
+
+form label {
+    font-weight: 900;
+    width: 45%;
+    padding: 10px 0px;
+}
+
+.divInputField {
+    display: flex;
+}
+
+.divInputField label ,
+.radioDiv > label {
+    cursor: pointer;
+    position: relative;
+}
+
+.divInputField label::after ,
+.radioDiv > label::after {
+    content: ":";
+    color: black;
+    position: absolute;
+    top: 10px;
+    font-size: 25px;
+    font-weight: 900;
+}
+#fullNameLabel::after {
+    left: 115px;
+}
+#phoneLabel::after {
+    left: 70px;
+}
+#userNameLabel::after {
+    left: 123px;
+}
+#emailLabel::after {
+    left: 69px;
+}
+#passwordLabel::after {
+    left: 107px;
+}
+.radioDiv > label::after {
+    left: 85px;
+}
+#birthDataLabel::after {
+    left: 117px;
+}
+
+.radioDiv {
+    display: flex;
+}
+
+.radioDiv div label {
+    font: 17px sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.radioDiv div div {
+    display: inline;
+}
+
+.radioDiv > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radioDiv #Male ,
+.radioDiv #Female ,
+.radioDiv #PreferNotToSay {
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.radioDiv #Female ,
+.radioDiv #PreferNotToSay {
+    margin-left: 50px;
+}
+
+.divInputField input {
+    width: 90%;
+    font: 17px sans-serif;
+    font-weight: 700;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+.divInputField input:hover {
+    border:1px solid black;
+}
+
+.questionLink ,
+.centerDiv {
+    margin: 30px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.questionLink span {
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.questionLink span a {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+.centerDiv input {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px 0px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.centerDiv #Reset {
+    background-color: rgba(255, 0, 0, 0.664);
+}
+
+.centerDiv #Submit {
+    background-color: rgba(53, 43, 245, 0.664);
+}
+
+@media screen and (max-width: 1581.6px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1483.6px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1275.6px) {
+    body {
+        font-size: 23px;
+    }
+    .divInputField input {
+        font-weight: 500;
+    }
+    .divInputField label::after ,
+    .radioDiv > label::after {
+        top: 8px;
+    }
+    #fullNameLabel::after {
+        left: 107px;
+    }
+    #phoneLabel::after {
+        left: 66px;
+    }
+    #userNameLabel::after {
+        left: 113px;
+    }
+    #emailLabel::after {
+        left: 65px;
+    }
+    #passwordLabel::after {
+        left: 100px;
+    }
+    .radioDiv > label::after {
+        left: 80px;
+    }
+    #birthDataLabel::after {
+        left: 110px;
+    }
+    .title::before ,
+    .title::after {
+        width: 165px;
+    }
+}
+
+@media screen and (max-width: 905.6px) {
+    .radioDiv > label {
+        top: 17px;
+    }
+    .radioDiv > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .radioDiv #Female ,
+    .radioDiv #PreferNotToSay {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 815.6px) {
+    body {
+        font-size: 20px;
+    }
+    .divInputField label::after ,
+    .radioDiv > label::after {
+        font-size: 22px;
+    }
+    #fullNameLabel::after {
+        left: 93px;
+    }
+    #phoneLabel::after {
+        left: 58px;
+    }
+    #userNameLabel::after {
+        left: 99px;
+    }
+    #emailLabel::after {
+        left: 55px;
+    }
+    #passwordLabel::after {
+        left: 86px;
+    }
+    .radioDiv > label::after {
+        left: 69px;
+    }
+    #birthDataLabel::after {
+        left: 96px;
+    }
+    .title::before ,
+    .title::after {
+        width: 145px;
+    }
+}
+
+@media screen and (max-width: 700.6px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 520.6px) {
+    body {
+        font-size: 17px;
+    }
+    form label {
+        font-weight: 100;
+    }
+    .divInputField input {
+        font-size: 15px;
+    }
+
+    .divInputField label::after ,
+    .radioDiv > label::after ,
+    .radioDiv > label {
+        top: 7px;
+    }
+
+    .divInputField label::after ,
+    .radioDiv > label::after {
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .radioDiv div label {
+        font: 15px sans-serif;
+        font-weight: 700;
+    }
+    #fullNameLabel::after {
+        left: 75px;
+    }
+    #phoneLabel::after {
+        left: 45px;
+    }
+    #userNameLabel::after {
+        left: 80px;
+    }
+    #emailLabel::after {
+        left: 45px;
+    }
+    #passwordLabel::after {
+        left: 70px;
+    }
+    .radioDiv > label::after {
+        left: 53px;
+    }
+    #birthDataLabel::after {
+        left: 75px;
+    }
+    .title::before ,
+    .title::after {
+        width: 125px;
+    }
+}
+
+@media screen and (max-width: 430.6px) {
+    .divInputField {
+        flex-direction: column;
+        align-items: center;
+    }
+    .divInputField input {
+        width: 100%;
+    }
+    .divInputField label::after {
+        display: none;
+    }
+    #fullNameLabel {
+        left: 38px;
+    }
+    #phoneLabel {
+        left: 45px;
+    }
+    #userNameLabel {
+        left: 35px;
+    }
+    #emailLabel {
+        left: 50px;
+    }
+    #passwordLabel {
+        left: 40px;
+    }
+    #birthDataLabel{
+        left: 33px;
+    }
+    .radioDiv > label {
+        display: none;
+    }
+    .radioDiv div label {
+        font-weight: 100;
+    }
+}
+
+@media screen and (max-width: 396.6px) {
+    #fullNameLabel {
+        left: 27px;
+    }
+    #phoneLabel {
+        left: 35px;
+    }
+    #userNameLabel {
+        left: 30px;
+    }
+    #emailLabel {
+        left: 45px;
+    }
+    #passwordLabel {
+        left: 35px;
+    }
+    #birthDataLabel{
+        left: 30px;
+    }
+}
+
+@media screen and (max-width: 348.6px) {
+    .divInputField label {
+        display: none;
+    }
+    .centerDiv {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 335.6px) {
+    .title::before ,
+    .title::after {
+        width: 195px;
+    }
+    .title {
+        font-size: 14px;
+    }
+    .title::before ,
+    .title::after {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 305.6px) {
+    .questionLink a {
+        display: block;
+        text-align: center;
+    }
+} 
+
+@media screen and (max-width: 255.6px) {
+    .container {
+        min-width: 250px;
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+    }
+} 
+
+/* min-width: 250px; */

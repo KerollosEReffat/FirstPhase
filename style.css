@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* scroll-behavior: smooth; */
+  --color-primary: #7d2ae8;
+}
+
+body {
+  width: 100%;
+  height: 100hv;
+  position: relative;
+  background: #8b8b8b url(./Images/Resume_Background_Image.svg) no-repeat
+    center center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#Preloader {
+  background: #000 url(../../Images/Preloader.gif) no-repeat center center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  font-size: 30px;
+  color: white;
+}
+
+@keyframes text {
+  50% {
+    color: black;
+    text-shadow: 3px 3px red, -1em 0 0.4em rgba(255, 255, 255, 0);
+  }
+}
+
+#clock {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+/* ////////////////////////////////////////////////////////////////// */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 100px 30px 89px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+header a {
+  text-decoration: none;
+}
+header div a h1 {
+  color: var(--color-primary);
+  /* color: red; */
+  /* color: rgb(0, 0, 0); */
+}
+header > div {
+  display: flex;
+  align-items: center;
+}
+header > div img {
+  width: 70px;
+  margin-right: 25px;
+}
+/* ////////////////////////////////////////////////////////////////// */
+#sideBTN {
+  position: relative;
+}
+
+/* #sideBTN , .sideSpan {
+    display: block;
+} */
+
+#sideLabelBTN {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#sideInputBTN {
+  display: none;
+}
+
+.sideSpan {
+  margin: 5px;
+  /* width: 30px; */
+  background-color: rgb(0, 0, 0);
+  /* height: 3px; */
+  transition: all 0.3s ease-in-out;
+  /* border-radius: 100%; */
+  width: 35px;
+  height: 4px;
+  border-radius: 100px;
+}
+
+input:checked ~ span.first,
+input:checked ~ span.last {
+  background-color: rgb(255, 0, 0);
+}
+
+input:checked ~ span.first {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+input:checked ~ span.middle {
+  background-color: transparent;
+}
+input:checked ~ span.last {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+.navigation {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation #BTNs {
+  margin-left: 35px;
+}
+.navigation > a {
+  font-size: 18.3px;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.navigation > a:hover {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.navigation div a {
+  display: block;
+  color: #fff;
+  padding: 8px 35px;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid var(--color-primary);
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+.navigation div a:hover {
+  color: var(--color-primary);
+  background-color: transparent;
+  font-weight: 700;
+}
+#loginBTN {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#loginBTN:hover,
+#registerBTN:hover {
+  background-color: #fff;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+.home {
+  width: 100%;
+  height: 100vh;
+  padding: 30px 100px 0px 100px;
+}
+/* ////////////////////////////////////////////////////////////////// */
+.content {
+  margin-top: 400px;
+  max-width: 500px;
+  color: #555;
+}
+.content h2 {
+  font-size: 3em;
+}
+.content h2 span {
+  color: var(--color-primary);
+}
+.content h2 span i {
+  color: #000000;
+}
+.content h4 {
+  font-size: 25px;
+}
+.content p {
+  padding: 10px 0 40px 0;
+}
+/* ////////////////////////////////////////////////////////////////// */
+.home div div a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 40px;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid var(--color-primary);
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.home div div a:hover {
+  color: var(--color-primary);
+  background-color: #fff;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1745px) {
+  .navigation {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 1178px) {
+  header .navigation a {
+    display: none;
+  }
+  header .navigation {
+    width: fit-content;
+  }
+  #sideBTN,
+  .sideSpan {
+    display: block;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header div img {
+    width: 55px;
+  }
+  .home .content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .home .content h2 span {
+    font-size: 37px;
+    color: red;
+  }
+  .home .content h2 span i {
+    font-size: 33px;
+  }
+  .home .content h4 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 656px) {
+  #clock {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .home {
+    padding: 25px 25px 250px 25px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 528px) {
+  header {
+    padding: 30px 50px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home .content h2 span::before {
+    content: "";
+    display: block;
+  }
+  header {
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 370px) {
+  header div img {
+    width: 45px;
+  }
+  header > div h1 {
+    font-size: 20px;
+  }
+  .sideSpan {
+    height: 3px;
+    border-radius: 100%;
+  }
+  input:checked ~ span.first {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  input:checked ~ span.last {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+}
+@media screen and (max-width: 320px) {
+  .home .content h2 span {
+    font-size: 32px;
+  }
+}

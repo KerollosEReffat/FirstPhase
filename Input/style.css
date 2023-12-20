@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(../Images/natural-beauty.jpg);
+    background-size: cover;
+}
+
+.container {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+    color: white;
+}
+
+.form-title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px white;
+}
+
+.userInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+form .userInfo div {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+form label {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+form .userInfo input {
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 15px;
+    transition: .4s ease-in-out;
+}
+
+form .userInfo input:focus {
+    background-color: wheat;
+}
+
+.gender-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid white;
+}
+
+.gender-details-box > div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gender-details-box label {
+    padding: 0 15px 0 7px;
+}
+
+.gender-details-box div div input ,
+.gender-details-box div div label ,
+form .userInfo label {
+    cursor: pointer;
+}
+
+.from-submit-btn {
+    margin-top: 40px;
+}
+
+.from-submit-btn input {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: rgba(209, 209, 209);
+    background: rgba(63, 114, 76, 0.7);
+}
+
+.from-submit-btn input:hover {
+    background: rgba(56, 204, 93, 0.7);
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Regestration form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 claass="form-title">Enter CV Information</h1>
+        <form action="#">
+            <div class="userInfo">
+                <div claas="iputBox">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter Your First Name">
+                </div>
+
+                <div claas="iputBox">
+                    <label for="familyName">Family Name</label>
+                    <input type="text" id="familyName" name="familyName" placeholder="Enter Your Family Name">
+                </div>
+
+                <div claas="iputBox">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email">
+                </div>
+
+                <div claas="iputBox">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Your Phone Number">
+                </div>
+
+                <div claas="iputBox">
+                    <label for="BirthDate">Birth Date</label>
+                    <input type="text" id="BirthDate" name="BirthDate" placeholder="Enter Your Birth Date">
+                </div>
+
+                <div claas="iputBox">
+                    <label for="Natounality">Natounality</label>
+                    <input type="text" id="Natounality" name="Natounality" placeholder="Enter Your Natounality">
+                </div>
+            </div>
+            <div class="gender-details-box">
+                <span class="gender-title">Gender</span>
+                <div>
+                    <div> 
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div> <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="from-submit-btn">
+                <input type="submit" value="Save">
+            </div>
+    </div>
+
+    </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

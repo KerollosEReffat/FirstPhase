@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color-primary: #7d2ae8;
+}
+
+body {
+  background-color: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#slider {
+  width: 90%;
+  position: relative;
+  user-select: none;
+  padding: 0 10px;
+}
+
+#slider #carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 24.23px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+}
+#carousel::-webkit-scrollbar {
+  display: none;
+}
+#slider #carousel div {
+  position: relative;
+  height: 500px;
+  margin: 15px 0px;
+  box-shadow: 10px 10px 15px brown;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#slider #carousel div:hover {
+  box-shadow: 0px 0px 0px brown;
+  border: 3px dotted brown;
+}
+
+#slider #carousel div img {
+  z-index: 1;
+}
+
+#slider #carousel div:hover img {
+  opacity: 0.5;
+}
+
+#slider #carousel div span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(165, 42, 42, 0.5);
+  opacity: 0;
+  z-index: 5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#slider #carousel div:hover span {
+  opacity: 0.5;
+}
+
+#slider #carousel div a {
+  font-size: 35px;
+  font-family: "Lucida Sans Unicode";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #7d2ae8;
+  border: 2px solid #7d2ae8;
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#slider #carousel div:hover a {
+  opacity: 1;
+}
+
+#slider #carousel div:hover a:hover {
+  color: #7d2ae8;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 25px;
+  padding: 3px 35px;
+  border-radius: 50px;
+}
+
+#slider #carousel div img {
+  scroll-snap-align: start;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#slider button {
+  font-size: 20px;
+  font-family: monospace;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: transform 0.1s linear;
+  z-index: 5;
+}
+#slider button:active {
+  transform: translateY(-50%) scale(0.85);
+}
+#slider #leftBTN {
+  left: -22px;
+}
+#slider #rightBTN {
+  right: -22px;
+}
+
+@media screen and (max-width: 1220px) {
+  #slider #carousel {
+    grid-auto-columns: calc((100% / 3) - 0px);
+  }
+}
+
+@media screen and (max-width: 635px) {
+  #slider #carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+#clock {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 100px 30px 89px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+header a {
+  text-decoration: none;
+}
+header div a h1 {
+  color: var(--color-primary);
+  /* color: red; */
+  /* color: rgb(0, 0, 0); */
+}
+header > div {
+  display: flex;
+  align-items: center;
+}
+header > div img {
+  width: 70px;
+  margin-right: 25px;
+}
+/* ////////////////////////////////////////////////////////////////// */
+header #sideBTN {
+  position: relative;
+}
+
+/* #sideBTN , .sideSpan {
+      display: block;
+  } */
+
+header #sideLabelBTN {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+header #sideInputBTN {
+  display: none;
+}
+
+header .sideSpan {
+  margin: 5px;
+  /* width: 30px; */
+  background-color: rgb(0, 0, 0);
+  /* height: 3px; */
+  transition: all 0.3s ease-in-out;
+  /* border-radius: 100%; */
+  width: 35px;
+  height: 4px;
+  border-radius: 100px;
+}
+
+header input:checked ~ span.first,
+header input:checked ~ span.last {
+  background-color: rgb(255, 0, 0);
+}
+
+header input:checked ~ span.first {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+header input:checked ~ span.middle {
+  background-color: transparent;
+}
+header input:checked ~ span.last {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+header .navigation {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navigation #BTNs {
+  margin-left: 35px;
+}
+header .navigation > a {
+  font-size: 18.3px;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+}
+header .navigation > a:hover {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+header .navigation div a {
+  display: block;
+  color: #fff;
+  padding: 8px 35px;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid var(--color-primary);
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+header .navigation div a:hover {
+  color: var(--color-primary);
+  background-color: transparent;
+  font-weight: 700;
+}
+header #loginBTN {
+  text-align: center;
+  margin-top: 15px;
+}
+
+header #loginBTN:hover,
+header #registerBTN:hover {
+  background-color: #fff;
+}
